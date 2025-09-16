@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #222222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background-color: #0055aa;
+            color: #ffffff;
+            padding: 0.5em;
+            text-align: center;
+        }
+        nav a {
+            color: #ffe600;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+        main {
+            padding: 2em;
+            background-color: #f7f7f7;
+        }
+        footer {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+        img {
+            border: 2px solid #003366;
+            max-width: 100%;
+            height: auto;
+        }
+        h1, h2 {
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Accessible HTML Page</h1>
+    </header>
+    <nav aria-label="Main Navigation" role="navigation">
+        <a href="#main-content">Skip to Content</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main id="main-content" role="main" tabindex="-1">
+        <section id="features">
+            <h2>Features for Accessibility</h2>
+            <ul>
+                <li>Semantic elements (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;)</li>
+                <li>Image with descriptive alt attribute</li>
+                <li>ARIA roles for navigation and main content</li>
+                <li>Sufficient color contrast for text and backgrounds</li>
+            </ul>
+            <img src="https://via.placeholder.com/300x100?text=Accessible+Image" alt="Example placeholder graphic with the text 'Accessible Image'" />
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>For more information, reach out to <a href="mailto:you@example.com">you@example.com</a>.</p>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2025 Your Name</p>
+    </footer>
+</body>
+</html>
