@@ -3,7 +3,8 @@ body {
     color: #222222;
     font-family: Arial, sans-serif;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.125rem; /* 18px for improved accessibility */
+    line-height: 1.5; /* Improved line spacing for readability */
 }
 header {
     background-color: #003366;
@@ -50,6 +51,29 @@ img {
 h1, h2 {
     color: #003366;
 }
+h1 {
+    font-size: 2rem; /* 32px minimum for accessibility */
+}
+h2 {
+    font-size: 1.5rem; /* 24px minimum for accessibility */
+}
 a {
     transition: color 0.2s, background-color 0.2s;
+}
+
+/* Logo styling */
+header img {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Service images styling */
+#features div {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#features div img {
+    display: block;
+    margin: 0 auto 1rem auto;
 }
