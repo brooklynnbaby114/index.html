@@ -3,7 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     font-size: 1.125rem; /* 18px for improved accessibility */
+opilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
+    line-height: 1.5; /* Improved line spacing for readability */
+
     line-height: 1.5;    /* Improved line spacing for readability */
+main
 }
 header {
     background-color: #003366;
@@ -60,10 +64,36 @@ header img {
     display: block;
     margin: 0 auto 1rem auto;
 }
+copilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
+h1 {
+    font-size: 2rem; /* 32px minimum for accessibility */
+}
+h2 {
+    font-size: 1.5rem; /* 24px minimum for accessibility */
+}
+a {
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* Logo styling */
+header img {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Service images styling */
+
+main
 #features div {
     margin: 2rem 0;
     text-align: center;
 }
+copilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
+
+#features div img {
+    display: block;
+    margin: 0 auto 1rem auto;
+
 #features div img {
     display: block;
     margin: 0 auto 1rem auto;
@@ -75,4 +105,5 @@ footer {
     padding: 1rem 0;
     font-size: 1rem;
     letter-spacing: 0.03em;
+main
 }
