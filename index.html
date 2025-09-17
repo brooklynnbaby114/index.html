@@ -98,6 +98,46 @@
             <h2>Contact</h2>
             <p>For more information, reach out to <a href="mailto:you@example.com">you@example.com</a>.</p>
         </section>
+        <section id="external-links">
+            <h2>External Links</h2>
+            <p>
+              Visit <a href="https://www.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> for more information.<br>
+              Check out <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.
+            </p>
+            <table border="1">
+              <tr>
+                <th>Name</th>
+                <th>Website</th>
+              </tr>
+              <tr>
+                <td>Wikipedia</td>
+                <td><a href="https://www.wikipedia.org/" target="_blank">Link</a></td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td><a href="https://github.com/" target="_blank">Link</a></td>
+              </tr>
+            </table>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <br>
+              <input type="submit" value="Submit">
+            </form>
+            <script>
+              document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                alert('Thank you, ' + name + '! Your form has been processed.');
+              });
+            </script>
+        </section>
     </main>
     <footer role="contentinfo">
         <p>&copy; 2025 Kyle Harmon</p>
