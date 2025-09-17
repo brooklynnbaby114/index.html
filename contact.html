@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Entertainment Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function processForm(event) {
+            event.preventDefault();
+            alert('Thank you for contacting us, ' + document.getElementById('name').value + '!');
+        }
+    </script>
+</head>
+<body>
+    <header><h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="characters.html">Characters</a>
+            <a href="table.html">Table</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Send Us a Message</h2>
+        <form onsubmit="processForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="https://github.com/brooklynnbaby114/index.html" target="_blank">Our GitHub Repo</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Entertainment Hub</p>
+    </footer>
+</body>
+</html>
