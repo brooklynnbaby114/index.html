@@ -3,64 +3,93 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entanimeertainment Hub</title>
+    <title>Entanimeertainment Hub | Anime Entertainment & Accessibility</title>
+    <meta name="description" content="Entanimeertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and expert services!" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/150x100?text=Anime+Logo" alt="Entanimeertainment Hub logo featuring anime characters" />
-        <h1><strong>Entanimeertainment Hub</strong></h1>
-        <p>Welcome to Your Accessible HTML Page</p>
+        <img src="images/EntanimeertainmentHubLogo.png" alt="Entanimeertainment Hub logo featuring anime characters" />
+        <h1>Entanimeertainment Hub</h1>
+        <p>Welcome to Your Accessible Anime Entertainment Page</p>
     </header>
     <nav aria-label="Main Navigation">
         <ul>
             <li><a href="#main-content">Skip to Content</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main id="main-content">
         <section id="features">
-            <h2>Features for Accessibility</h2>
+            <h2>Entanimeertainment Hub Accessibility Features</h2>
             <ul>
                 <li>Semantic HTML structure for screen readers</li>
-                <li>Descriptive alt text for all images</li>
+                <li>Descriptive alt text for all images (e.g., <strong>Entanimeertainment Hub logo featuring anime characters</strong>)</li>
                 <li>Keyboard navigation support</li>
                 <li>Accessible color contrast</li>
                 <li>Sufficient color contrast for text and backgrounds</li>
             </ul>
-            <img src="https://via.placeholder.com/300x200?text=Anime+Character+1" alt="Colorful anime character with blue hair and traditional Japanese clothing in an action pose" />
-            <img src="https://via.placeholder.com/300x200?text=Anime+Character+2" alt="Anime character with red hair wielding a magical staff in a mystical forest setting" />
         </section>
         <section id="anime-gallery">
-            <h2>Featured Anime Content</h2>
+            <h2>Entanimeertainment Hub Anime Gallery</h2>
             <div class="anime-images">
-                <img src="https://via.placeholder.com/250x350?text=Anime+Poster+1" alt="Anime movie poster showing protagonists standing together under cherry blossoms with dramatic lighting" />
-                <img src="https://via.placeholder.com/250x350?text=Anime+Poster+2" alt="Fantasy anime poster featuring a dragon and warrior in an epic battle scene with mountains in the background" />
-                <img src="https://via.placeholder.com/300x100?text=Accessible+Image" alt="Example placeholder graphic with the text 'Accessible Image'" />
+                <img src="images/anime-poster-1-entanimeertainmenthub.jpg" alt="Entanimeertainment Hub anime movie poster showing protagonists under cherry blossoms" />
+                <img src="images/anime-poster-2-entanimeertainmenthub.jpg" alt="Fantasy anime poster from Entanimeertainment Hub featuring a dragon and warrior" />
+                <img src="images/accessible-image-entanimeertainmenthub.png" alt="Accessible Image from Entanimeertainment Hub" />
             </div>
-            <h2>Our Services</h2>
-            <div>
-                <img src="https://via.placeholder.com/250x150/0055aa/ffffff?text=Web+Design" alt="Web design service illustration showing a modern website layout with navigation and content section" />
-                <p>Professional web design services with accessibility in mind.</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/250x150/ffe600/003366?text=Development" alt="Software development illustration showing code editor with HTML and CSS files open" />
-                <p>Full-stack development solutions for modern applications.</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/250x150/003366/ffffff?text=Consulting" alt="Consulting service illustration depicting team collaboration with accessibility guidelines and best practices" />
-                <p>Expert consulting on web accessibility and user experience optimization.</p>
-            </div>
+            <p>
+                <a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Check out our favorite anime platform!</a>
+            </p>
+        </section>
+        <section id="services">
+            <h2>Entanimeertainment Hub Services</h2>
+            <ul>
+                <li>
+                    <img src="images/web-design-entanimeertainmenthub.png" alt="Entanimeertainment Hub web design service illustration showing a modern website layout" />
+                    <p>Professional web design with accessibility in mind.</p>
+                </li>
+                <li>
+                    <img src="images/development-entanimeertainmenthub.png" alt="Entanimeertainment Hub software development illustration showing code editor" />
+                    <p>Full-stack development solutions for modern applications.</p>
+                </li>
+                <li>
+                    <img src="images/consulting-entanimeertainmenthub.png" alt="Entanimeertainment Hub consulting illustration depicting team collaboration" />
+                    <p>Expert consulting on web accessibility and user experience optimization.</p>
+                </li>
+            </ul>
         </section>
         <section id="contact">
-            <h2>Contact</h2>
+            <h2>Contact Entanimeertainment Hub</h2>
             <p>Email: <a href="mailto:info@entanimeertainmenthub.com">info@entanimeertainmenthub.com</a></p>
+            <p><strong>Ready to start your next accessible anime adventure?</strong></p>
+            <a class="cta-button" href="mailto:info@entanimeertainmenthub.com">Contact Us Now</a>
         </section>
     </main>
+    <!-- Example popup/chat code, hidden by default -->
+    <div id="popup-chat" style="display:none;" role="dialog" aria-modal="true" aria-label="Live Chat">
+        <p>Welcome to Entanimeertainment Hub! How can we help you?</p>
+        <button onclick="document.getElementById('popup-chat').style.display='none';">Close</button>
+    </div>
     <footer>
+        <ul class="footer-links">
+            <li><a href="#features">Accessibility Features</a></li>
+            <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://twitter.com/" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+            <a href="https://facebook.com/" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+            <a href="https://instagram.com/" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        </div>
         <p>&copy; 2025 Entanimeertainment Hub. All rights reserved.</p>
     </footer>
+    <script>
+        // Example: Show chat popup only when triggered
+        // document.getElementById('popup-chat').style.display = 'block';
+    </script>
 </body>
 </html>
