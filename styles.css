@@ -1,116 +1,157 @@
 body {
-    color: #222222;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9fc;
+    color: #222;
     margin: 0;
-    font-size: 1.125rem; /* 18px for improved accessibility */
-    line-height: 1.5;    /* Improved line spacing for readability */
-    background: #fff;
+    padding: 0;
 }
 
 header {
-    background-color: #003366;
-    color: #ffffff;
-    padding: 2rem 0 1rem 0;
+    background: #003366;
+    color: #fff;
+    padding: 1.5rem 1rem;
     text-align: center;
 }
 
 header img {
-    display: block;
-    margin: 0 auto 1rem auto;
+    max-width: 160px;
+    height: auto;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
     list-style: none;
     padding: 0;
+    background: #0055aa;
     margin: 0;
 }
 
-nav a {
-    color: #0055aa;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125rem;
-    transition: color 0.2s, background-color 0.2s;
+nav ul li {
+    margin: 0 1rem;
 }
 
-nav a:focus,
-nav a:hover {
-    color: #003366;
-    background-color: #ffe600;
-    outline: 2px solid #003366;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: #003366;
+    outline: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
 }
 
 main {
     padding: 2rem 1rem;
-    background: #f6f6f6;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-h1, h2 {
-    color: #003366;
-}
-
-h1 {
-    font-size: 2rem; /* 32px minimum for accessibility */
-}
-
-h2 {
-    font-size: 1.5rem; /* 24px minimum for accessibility */
+    max-width: 900px;
+    margin: auto;
 }
 
 ul {
-    margin-left: 1rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.anime-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
 }
 
 .anime-images img {
+    margin: 0.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px #bbb;
+    max-width: 180px;
 }
 
-#anime-gallery {
-    text-align: center;
-    margin: 2rem 0;
+.cta-button {
+    display: inline-block;
+    background: #ffe600;
+    color: #003366;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.2s;
 }
 
-#features div {
-    margin: 2rem 0;
-    text-align: center;
+.cta-button:hover,
+.cta-button:focus {
+    background: #fff200;
+    color: #222;
 }
 
-#features div img {
-    display: block;
-    margin: 0 auto 1rem auto;
+#popup-chat {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #fff;
+    border: 2px solid #003366;
+    border-radius: 6px;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 12px #aaa;
+    width: 300px;
 }
 
 footer {
-    background-color: #003366;
-    color: #ffffff;
+    background: #003366;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    font-size: 1rem;
-    letter-spacing: 0.03em;
+    padding: 1.5rem 1rem 2rem 1rem;
 }
 
-a {
-    transition: color 0.2s, background-color 0.2s;
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin: 0 1rem;
+}
+
+.footer-links a {
+    color: #ffe600;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+/* Accessibility */
+a:focus, button:focus {
+    outline: 2px dashed #ffe600;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .anime-images img {
+        max-width: 100%;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
 }
