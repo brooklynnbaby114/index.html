@@ -1,56 +1,70 @@
 body {
-    background-color: #ffffff;
     color: #222222;
     font-family: Arial, sans-serif;
     margin: 0;
     font-size: 1.125rem; /* 18px for improved accessibility */
+opilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
     line-height: 1.5; /* Improved line spacing for readability */
+
+    line-height: 1.5;    /* Improved line spacing for readability */
+main
 }
 header {
     background-color: #003366;
     color: #ffffff;
-    padding: 1em;
+    padding: 2rem 0 1rem 0;
     text-align: center;
 }
-nav {
-    background-color: #0055aa;
-    color: #ffffff;
-    padding: 0.5em;
-    text-align: center;
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 nav a {
-    color: #ffe600;
+    color: #0055aa;
     text-decoration: none;
-    margin: 0 1em;
     font-weight: bold;
-    outline: none;
+    font-size: 1.125rem;
+    transition: color 0.2s, background-color 0.2s;
 }
 nav a:focus,
 nav a:hover {
-    background-color: #003366;
-    color: #ffffff;
-    text-decoration: underline;
-    outline: 2px solid #ffe600;
+    color: #003366;
+    background-color: #ffe600;
+    outline: 2px solid #003366;
 }
 main {
-    padding: 2em;
-    background-color: #f7f7f7;
+    padding: 2rem 1rem;
+    background: #f6f6f6;
 }
-footer {
-    background-color: #222222;
-    color: #ffffff;
-    text-align: center;
-    padding: 1em;
-    position: relative;
-}
-img {
-    border: 2px solid #003366;
-    max-width: 100%;
-    height: auto;
+section {
+    margin-bottom: 2rem;
 }
 h1, h2 {
     color: #003366;
 }
+h1 {
+    font-size: 2rem; /* 32px minimum for accessibility */
+}
+h2 {
+    font-size: 1.5rem; /* 24px minimum for accessibility */
+}
+ul {
+    margin-left: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+header img {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+copilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
 h1 {
     font-size: 2rem; /* 32px minimum for accessibility */
 }
@@ -68,12 +82,28 @@ header img {
 }
 
 /* Service images styling */
+
+main
 #features div {
     margin: 2rem 0;
     text-align: center;
 }
+copilot/fix-64f3c1e4-dc6b-4335-89fc-ba044ba1ceba
 
 #features div img {
     display: block;
     margin: 0 auto 1rem auto;
+
+#features div img {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+main
 }
