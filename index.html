@@ -19,6 +19,7 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#anime-gallery">Anime Gallery</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#js-demo">JS Demo</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -61,6 +62,40 @@
                 </li>
             </ul>
         </section>
+        <section id="js-demo">
+            <h2>JavaScript Objects & Arrays Demo</h2>
+            <p>Explore how we use JavaScript objects and arrays to manage our anime database!</p>
+            
+            <div class="demo-container">
+                <div class="objects-demo">
+                    <h3>Anime Characters (Objects)</h3>
+                    <div id="character-display">
+                        <p>Click a button to see character details:</p>
+                        <button onclick="displayCharacter(0)">Naruto</button>
+                        <button onclick="displayCharacter(1)">Luffy</button>
+                        <button onclick="displayCharacter(2)">Goku</button>
+                    </div>
+                    <div id="character-info"></div>
+                </div>
+                
+                <div class="arrays-demo">
+                    <h3>Anime Genres (Arrays)</h3>
+                    <div id="genre-display">
+                        <button onclick="showAllGenres()">Show All Genres</button>
+                        <button onclick="showPopularGenres()">Show Top 3</button>
+                        <button onclick="addGenre()">Add Random Genre</button>
+                    </div>
+                    <div id="genre-list"></div>
+                </div>
+                
+                <div class="interactive-demo">
+                    <h3>Interactive Anime Library</h3>
+                    <button onclick="showRandomAnime()">Get Random Anime Recommendation</button>
+                    <div id="anime-recommendation"></div>
+                </div>
+            </div>
+        </section>
+        
         <section id="contact">
             <h2>Contact Entanimeertainment Hub</h2>
             <p>Email: <a href="mailto:info@entanimeertainmenthub.com">info@entanimeertainmenthub.com</a></p>
@@ -78,6 +113,7 @@
             <li><a href="#features">Accessibility Features</a></li>
             <li><a href="#anime-gallery">Anime Gallery</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#js-demo">JS Demo</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-icons">
@@ -87,9 +123,6 @@
         </div>
         <p>&copy; 2025 Entanimeertainment Hub. All rights reserved.</p>
     </footer>
-    <script>
-        // Example: Show chat popup only when triggered
-        // document.getElementById('popup-chat').style.display = 'block';
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
