@@ -1,122 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entertainment Hub | Anime Entertainment & Accessibility</title>
-    <meta name="description" content="Entertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and more." />
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <header>
-        <img src="images/EntertainmentHubLogo.png" alt="Entertainment Hub logo featuring anime characters" />
-        <h1>Entertainment Hub</h1>
-        <p>Welcome to Your Accessible Anime Entertainment Page</p>
-    </header>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="#main-content">Skip to Content</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#anime-gallery">Anime Gallery</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main id="main-content">
-        <section id="features">
-            <h2>Entertainment Hub Accessibility Features</h2>
-            <ul>
-                <li>Semantic HTML structure for screen readers</li>
-                <li>Descriptive alt text for all images (e.g., <strong>Entertainment Hub logo featuring anime characters</strong>)</li>
-                <li>Keyboard navigation support</li>
-                <li>Accessible color contrast</li>
-                <li>Sufficient color contrast for text and backgrounds</li>
-            </ul>
-        </section>
-        <section id="anime-gallery">
-            <h2>Entertainment Hub Anime Gallery</h2>
-            <div class="anime-images">
-                <img src="images/anime-poster-1-entertainmenthub.jpg" alt="Entertainment Hub anime movie poster showing protagonists under cherry blossoms" />
-                <img src="images/anime-poster-2-entertainmenthub.jpg" alt="Fantasy anime poster from Entertainment Hub featuring a dragon and warrior" />
-                <img src="images/accessible-image-entertainmenthub.png" alt="Accessible Image from Entertainment Hub" />
-            </div>
-            <p>
-                <a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Check out our favorite anime platform!</a>
-            </p>
-        </section>
-        <section id="services">
-            <h2>Entertainment Hub Services</h2>
-            <ul>
-                <li>
-                    <img src="images/web-design-entertainmenthub.png" alt="Entertainment Hub web design service illustration showing a modern website layout" />
-                    <p>Professional web design with accessibility in mind.</p>
-                </li>
-                <li>
-                    <img src="images/development-entertainmenthub.png" alt="Entertainment Hub software development illustration showing code editor" />
-                    <p>Full-stack development solutions for modern applications.</p>
-                </li>
-                <li>
-                    <img src="images/consulting-entertainmenthub.png" alt="Entertainment Hub consulting illustration depicting team collaboration" />
-                    <p>Expert consulting on web accessibility and user experience optimization.</p>
-                </li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Entertainment Hub</h2>
-            <p>Email: <a href="mailto:info@entertainmenthub.com">info@entertainmenthub.com</a></p>
-            <p><strong>Ready to start your next accessible anime adventure?</strong></p>
-            <a class="cta-button" href="mailto:info@entertainmenthub.com">Contact Us Now</a>
-        </section>
+- ...existing content... -->
         <!-- Accessible Input Demo Section -->
         <section id="input-demo" aria-labelledby="input-demo-heading">
-            <h2 id="input-demo-heading">Try Common HTML Inputs</h2>
-            <form id="demoForm" onsubmit="event.preventDefault(); showDemoResults();" style="max-width: 600px; margin: 2rem auto; padding: 1rem; border-radius: 8px; background: #f9f9fc; border: 1px solid #ddd;">
-                <fieldset>
-                    <legend><strong>Radio Buttons: Choose Your Fandom</strong></legend>
-                    <div>
-                        <input type="radio" id="radio-anime" name="fandom" value="Anime" required />
-                        <label for="radio-anime">Anime</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="radio-manga" name="fandom" value="Manga" />
-                        <label for="radio-manga">Manga</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="radio-games" name="fandom" value="Games" />
-                        <label for="radio-games">Games</label>
-                    </div>
-                </fieldset>
-                <br />
-                <label for="demo-slider"><strong>Slider: Pick a Hype Level (0–100)</strong></label>
-                <input type="range" id="demo-slider" name="hype" min="0" max="100" value="50" step="1" oninput="document.getElementById('slider-value').textContent = this.value" />
-                <span id="slider-value">50</span>
-                <br /><br />
-                <label for="demo-date"><strong>Date Picker: Select Your Next Watch Party</strong></label>
-                <input type="date" id="demo-date" name="watchparty" required />
-                <br /><br />
-                <label for="demo-file"><strong>File Uploader: Upload Your Cosplay Photo</strong></label>
-                <input type="file" id="demo-file" name="cosplay" accept="image/*" />
-                <span id="file-selected"></span>
-                <br /><br />
-                <button type="submit">Show Results</button>
-            </form>
-            <div id="demo-results" style="margin: 1.5rem 0 0 0;"></div>
+            <!-- ...existing input demo form... -->
         </section>
-    </main>
-    <footer>
-        <ul class="footer-links">
-            <li><a href="#features">Accessibility Features</a></li>
-            <li><a href="#anime-gallery">Anime Gallery</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="social-icons">
-            <a href="https://twitter.com/" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter" /></a>
-            <a href="https://facebook.com/" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook" /></a>
-            <a href="https://instagram.com/" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram" /></a>
-        </div>
-        <p>&copy; 2025 Entertainment Hub. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+
+        <!-- Conditionals Demo Section -->
+        <section id="conditionals-demo" aria-labelledby="conditionals-demo-heading" style="max-width: 650px; margin: 2rem auto;">
+            <h2 id="conditionals-demo-heading">JavaScript Conditionals Demo</h2>
+            <div class="demo-block" style="margin-bottom: 1.5em;">
+                <h3>If...Else If...Else Chain</h3>
+                <label for="ageInput"><strong>Enter Your Age:</strong></label>
+                <input type="number" id="ageInput" min="0" max="120" value="18" />
+                <button type="button" onclick="checkAgeCategory()">Check Category</button>
+                <div id="ageResult" class="demo-result" aria-live="polite"></div>
+            </div>
+            <div class="demo-block" style="margin-bottom: 1.5em;">
+                <h3>Switch Statement</h3>
+                <label for="characterSelect"><strong>Choose a Character:</strong></label>
+                <select id="characterSelect">
+                    <option value="Naruto">Naruto</option>
+                    <option value="Luffy">Luffy</option>
+                    <option value="Goku">Goku</option>
+                    <option value="Unknown">Unknown</option>
+                </select>
+                <button type="button" onclick="showCharacterRole()">Show Role</button>
+                <div id="roleResult" class="demo-result" aria-live="polite"></div>
+            </div>
+            <div class="demo-block" style="margin-bottom: 1.5em;">
+                <h3>Ternary Operator</h3>
+                <label for="numberInput"><strong>Enter a Number:</strong></label>
+                <input type="number" id="numberInput" value="7" />
+                <button type="button" onclick="checkEvenOdd()">Even or Odd?</button>
+                <div id="evenOddResult" class="demo-result" aria-live="polite"></div>
+            </div>
+            <div class="demo-block">
+                <h3>Nested Conditionals</h3>
+                <label for="fandomInput"><strong>Enter Fandom (Anime/Manga/Games):</strong></label>
+                <input type="text" id="fandomInput" value="Anime" />
+                <label for="fandomAgeInput"><strong>Enter Age:</strong></label>
+                <input type="number" id="fandomAgeInput" value="15" />
+                <button type="button" onclick="checkFandomAccess()">Check Access</button>
+                <div id="fandomAccessResult" class="demo-result" aria-live="polite"></div>
+            </div>
+        </section>
+<!-- ...existing content... -->
