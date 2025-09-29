@@ -20,6 +20,7 @@
             <li><a href="#anime-gallery">Anime Gallery</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#js-demo">JS Demo</a></li>
+            <li><a href="#demo-features">Demo Features</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -96,6 +97,109 @@
             </div>
         </section>
         
+        <section id="demo-features">
+            <h2>Interactive Demo Features</h2>
+            <p>Experience our interactive user engagement features - all data is stored locally in your browser!</p>
+            
+            <div class="demo-features-container">
+                <!-- User Profile Section -->
+                <div class="feature-section">
+                    <h3>👤 User Profile</h3>
+                    <div id="profile-form">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="favorite-anime">Favorite Anime:</label>
+                            <input type="text" id="favorite-anime" placeholder="Enter your favorite anime show">
+                        </div>
+                        <button onclick="saveProfile()">Save Profile</button>
+                        <button onclick="clearProfile()">Clear Profile</button>
+                    </div>
+                    <div id="profile-display" style="display: none;">
+                        <h4>Your Profile:</h4>
+                        <div id="profile-info"></div>
+                        <button onclick="editProfile()">Edit Profile</button>
+                    </div>
+                </div>
+
+                <!-- Like/Upvote Section -->
+                <div class="feature-section">
+                    <h3>⭐ Featured Anime Rating</h3>
+                    <div class="featured-anime">
+                        <h4>Attack on Titan</h4>
+                        <p>Epic story of humanity's fight for survival against giant humanoid creatures.</p>
+                        <div class="rating-controls">
+                            <button onclick="toggleLike()" id="like-btn">👍 Like</button>
+                            <span id="like-count">0</span> likes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poll/Survey Section -->
+                <div class="feature-section">
+                    <h3>📊 Poll: Favorite Anime Genre</h3>
+                    <div id="poll-section">
+                        <p>What's your favorite anime genre?</p>
+                        <form id="genre-poll">
+                            <label><input type="radio" name="genre" value="Action"> Action</label>
+                            <label><input type="radio" name="genre" value="Romance"> Romance</label>
+                            <label><input type="radio" name="genre" value="Comedy"> Comedy</label>
+                            <label><input type="radio" name="genre" value="Drama"> Drama</label>
+                            <label><input type="radio" name="genre" value="Fantasy"> Fantasy</label>
+                            <label><input type="radio" name="genre" value="Slice of Life"> Slice of Life</label>
+                        </form>
+                        <button onclick="submitVote()">Vote</button>
+                        <button onclick="showResults()">Show Results</button>
+                        <div id="poll-results"></div>
+                    </div>
+                </div>
+
+                <!-- Comment Section -->
+                <div class="feature-section">
+                    <h3>💬 Guestbook</h3>
+                    <div id="comment-form">
+                        <div class="form-group">
+                            <label for="comment-name">Name:</label>
+                            <input type="text" id="comment-name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-text">Comment:</label>
+                            <textarea id="comment-text" placeholder="Share your thoughts about anime..." rows="3"></textarea>
+                        </div>
+                        <button onclick="addComment()">Add Comment</button>
+                        <button onclick="clearComments()">Clear All Comments</button>
+                    </div>
+                    <div id="comments-display">
+                        <h4>Recent Comments:</h4>
+                        <div id="comments-list"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="feature-section">
+                    <h3>📧 Newsletter Signup</h3>
+                    <div id="newsletter-form">
+                        <p>Stay updated with the latest anime news and recommendations!</p>
+                        <div class="form-group">
+                            <label for="newsletter-email">Email:</label>
+                            <input type="email" id="newsletter-email" placeholder="Enter your email">
+                        </div>
+                        <button onclick="signupNewsletter()">Subscribe</button>
+                    </div>
+                    <div id="newsletter-success" style="display: none;">
+                        <p class="success-message">✅ Thank you for subscribing! You're now signed up for our anime newsletter.</p>
+                        <button onclick="resetNewsletter()">Subscribe Another Email</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>Contact Entanimeertainment Hub</h2>
             <p>Email: <a href="mailto:info@entanimeertainmenthub.com">info@entanimeertainmenthub.com</a></p>
@@ -114,6 +218,7 @@
             <li><a href="#anime-gallery">Anime Gallery</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#js-demo">JS Demo</a></li>
+            <li><a href="#demo-features">Demo Features</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-icons">
