@@ -1,203 +1,75 @@
-/* General Styles */
-body {
-    background: #f9f9fc;
-    color: #111; /* Increased contrast from #222 to #111 */
-    margin: 0;
-    font-size: 18px; /* Accessible base font size */
-    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
-    line-height: 1.5; /* Accessible line spacing */
-}
+...existing code...
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 1.5rem 1rem;
-    text-align: center;
-}
+// --- Conditionals Demo Functions ---
 
-header img {
-    max-width: 160px;
-}
-
-nav {
-    background: #0055aa;
-    padding: 0.5rem 0;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-nav ul li a:focus,
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-
-h1, h2, h3 {
-    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: 2rem;
-    line-height: 1.3;
-}
-
-h3 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-}
-
-.anime-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin: 1rem 0;
-}
-
-.anime-images img {
-    max-width: 220px;
-    border-radius: 10px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.10);
-    transition: transform 0.2s;
-}
-
-.anime-images img:focus,
-.anime-images img:hover {
-    transform: scale(1.04);
-    outline: 2px solid #0055aa;
-}
-
-ul {
-    padding-left: 1.1em;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.7em 1.7em;
-    background: #0055aa;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-
-.cta-button:focus,
-.cta-button:hover {
-    background: #003366;
-    color: #fff;
-}
-
-footer {
-    background: #222;
-    color: #fff;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.footer-links a:focus,
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.social-icons {
-    margin-bottom: 0.5rem;
-}
-
-.social-icons a {
-    margin: 0 0.4rem;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    transition: filter 0.2s;
-}
-
-.social-icons img:hover,
-.social-icons img:focus {
-    filter: brightness(1.15);
-    outline: 2px solid #0055aa;
-}
-
-/* Accessibility: Focus outline */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid #0055aa;
-    outline-offset: 2px;
-}
-
-@media (max-width: 600px) {
-    main {
-        padding: 0.5rem;
+// If...Else If...Else Chain
+function checkAgeCategory() {
+    const age = parseInt(document.getElementById('ageInput').value, 10);
+    let category;
+    if (isNaN(age)) {
+        category = 'Please enter a valid age.';
+    } else if (age < 13) {
+        category = 'You are a Child.';
+    } else if (age < 20) {
+        category = 'You are a Teenager.';
+    } else if (age < 65) {
+        category = 'You are an Adult.';
+    } else {
+        category = 'You are a Senior.';
     }
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .anime-images {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-links {
-        flex-direction: column;
-        gap: 0.4rem;
-    }
+    document.getElementById('ageResult').textContent = category;
 }
+
+// Switch Statement
+function showCharacterRole() {
+    const character = document.getElementById('characterSelect').value;
+    let role;
+    switch (character) {
+        case 'Naruto':
+            role = 'Naruto is a Ninja from Hidden Leaf Village.';
+            break;
+        case 'Luffy':
+            role = 'Luffy is the Captain of the Straw Hat Pirates.';
+            break;
+        case 'Goku':
+            role = 'Goku is a Saiyan Warrior from Dragon Ball.';
+            break;
+        default:
+            role = 'Unknown character selected.';
+    }
+    document.getElementById('roleResult').textContent = role;
+}
+
+// Ternary Operator
+function checkEvenOdd() {
+    const num = parseInt(document.getElementById('numberInput').value, 10);
+    const result = isNaN(num)
+        ? 'Please enter a number.'
+        : (num % 2 === 0 ? `The number ${num} is Even.` : `The number ${num} is Odd.`);
+    document.getElementById('evenOddResult').textContent = result;
+}
+
+// Nested Conditionals
+function checkFandomAccess() {
+    const fandom = document.getElementById('fandomInput').value.trim().toLowerCase();
+    const age = parseInt(document.getElementById('fandomAgeInput').value, 10);
+    let message;
+    if (fandom === 'anime' || fandom === 'manga' || fandom === 'games') {
+        if (!isNaN(age)) {
+            if (age < 13) {
+                message = `Access limited for young ${fandom} fans.`;
+            } else if (age < 18) {
+                message = `Welcome, teen ${fandom} fan!`;
+            } else {
+                message = `Full access granted for adult ${fandom} fans!`;
+            }
+        } else {
+            message = 'Please enter a valid age.';
+        }
+    } else {
+        message = 'Unknown fandom. Please enter Anime, Manga, or Games.';
+    }
+    document.getElementById('fandomAccessResult').textContent = message;
+}
+
+// ...existing code...
