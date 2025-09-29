@@ -138,10 +138,130 @@ footer {
     vertical-align: middle;
 }
 
+/* JavaScript Demo Section Styles */
+#js-demo {
+    background: #f0f8ff;
+    border: 2px solid #0055aa;
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.objects-demo, .arrays-demo, .interactive-demo {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 85, 170, 0.1);
+    border-left: 4px solid #0055aa;
+}
+
+.objects-demo h3, .arrays-demo h3, .interactive-demo h3 {
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.demo-container button {
+    background: #0055aa;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.demo-container button:hover {
+    background: #003d7a;
+    transform: translateY(-1px);
+}
+
+.demo-container button:active {
+    transform: translateY(0);
+}
+
+.character-card, .anime-recommendation {
+    background: #f9f9fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.character-card h4, .anime-recommendation h4 {
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.recommendation-card {
+    background: #fff;
+    border: 1px solid #0055aa;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.recommendation-card h5 {
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.recommendation-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.genre-list {
+    background: #f9f9fc;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.genre-list h4 {
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.genre-list ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.genre-list li {
+    margin: 0.25rem 0;
+    color: #333;
+}
+
 /* Accessibility */
 a:focus, button:focus {
     outline: 2px dashed #ffe600;
     outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    .demo-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .interactive-demo {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (max-width: 600px) {
@@ -153,5 +273,13 @@ a:focus, button:focus {
     }
     .footer-links {
         flex-direction: column;
+    }
+    
+    #js-demo {
+        padding: 1rem;
+    }
+    
+    .objects-demo, .arrays-demo, .interactive-demo {
+        padding: 1rem;
     }
 }
