@@ -1,9 +1,326 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Updated Index</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entanimeertainment Hub | Anime Entertainment & Accessibility</title>
+    <meta name="description" content="Entanimeertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and more." />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is the updated content of the index.html file.</p>
+    <header>
+        <img src="images/EntanimeertainmentHubLogo.png" alt="Entanimeertainment Hub logo featuring anime characters" />
+        <h1>Entanimeertainment Hub</h1>
+        <p>Welcome to Your Accessible Anime Entertainment Page</p>
+    </header>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#main-content">Skip to Content</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#js-demo">JS Demo</a></li>
+            <li><a href="#demo-features">Demo Features</a></li>
+            <li><a href="#advanced-js-demo">Advanced JS Demo</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <section id="features">
+            <h2>Entanimeertainment Hub Accessibility Features</h2>
+            <ul>
+                <li>Semantic HTML structure for screen readers</li>
+                <li>Descriptive alt text for all images (e.g., <strong>Entanimeertainment Hub logo featuring anime characters</strong>)</li>
+                <li>Keyboard navigation support</li>
+                <li>Accessible color contrast</li>
+                <li>Sufficient color contrast for text and backgrounds</li>
+            </ul>
+        </section>
+        <section id="anime-gallery">
+            <h2>Entanimeertainment Hub Anime Gallery</h2>
+            <div class="anime-images">
+                <img src="images/anime-poster-1-entanimeertainmenthub.jpg" alt="Entanimeertainment Hub anime movie poster showing protagonists under cherry blossoms" />
+                <img src="images/anime-poster-2-entanimeertainmenthub.jpg" alt="Fantasy anime poster from Entanimeertainment Hub featuring a dragon and warrior" />
+                <img src="images/accessible-image-entanimeertainmenthub.png" alt="Accessible Image from Entanimeertainment Hub" />
+            </div>
+            <p>
+                <a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Check out our favorite anime platform!</a>
+            </p>
+        </section>
+        <section id="services">
+            <h2>Entanimeertainment Hub Services</h2>
+            <ul>
+                <li>
+                    <img src="images/web-design-entanimeertainmenthub.png" alt="Entanimeertainment Hub web design service illustration showing a modern website layout" />
+                    <p>Professional web design with accessibility in mind.</p>
+                </li>
+                <li>
+                    <img src="images/development-entanimeertainmenthub.png" alt="Entanimeertainment Hub software development illustration showing code editor" />
+                    <p>Full-stack development solutions for modern applications.</p>
+                </li>
+                <li>
+                    <img src="images/consulting-entanimeertainmenthub.png" alt="Entanimeertainment Hub consulting illustration depicting team collaboration" />
+                    <p>Expert consulting on web accessibility and user experience optimization.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="js-demo">
+            <h2>JavaScript Objects & Arrays Demo</h2>
+            <p>Explore how we use JavaScript objects and arrays to manage our anime database!</p>
+            
+            <div class="demo-container">
+                <div class="objects-demo">
+                    <h3>Anime Characters (Objects)</h3>
+                    <div id="character-display">
+                        <p>Click a button to see character details:</p>
+                        <button onclick="displayCharacter(0)">Naruto</button>
+                        <button onclick="displayCharacter(1)">Luffy</button>
+                        <button onclick="displayCharacter(2)">Goku</button>
+                    </div>
+                    <div id="character-info"></div>
+                </div>
+                
+                <div class="arrays-demo">
+                    <h3>Anime Genres (Arrays)</h3>
+                    <div id="genre-display">
+                        <button onclick="showAllGenres()">Show All Genres</button>
+                        <button onclick="showPopularGenres()">Show Top 3</button>
+                        <button onclick="addGenre()">Add Random Genre</button>
+                    </div>
+                    <div id="genre-list"></div>
+                </div>
+                
+                <div class="interactive-demo">
+                    <h3>Interactive Anime Library</h3>
+                    <button onclick="showRandomAnime()">Get Random Anime Recommendation</button>
+                    <div id="anime-recommendation"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="demo-features">
+            <h2>Interactive Demo Features</h2>
+            <p>Experience our interactive user engagement features - all data is stored locally in your browser!</p>
+            
+            <div class="demo-features-container">
+                <!-- User Profile Section -->
+                <div class="feature-section">
+                    <h3>👤 User Profile</h3>
+                    <div id="profile-form">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="favorite-anime">Favorite Anime:</label>
+                            <input type="text" id="favorite-anime" placeholder="Enter your favorite anime show">
+                        </div>
+                        <button onclick="saveProfile()">Save Profile</button>
+                        <button onclick="clearProfile()">Clear Profile</button>
+                    </div>
+                    <div id="profile-display" style="display: none;">
+                        <h4>Your Profile:</h4>
+                        <div id="profile-info"></div>
+                        <button onclick="editProfile()">Edit Profile</button>
+                    </div>
+                </div>
+
+                <!-- Like/Upvote Section -->
+                <div class="feature-section">
+                    <h3>⭐ Featured Anime Rating</h3>
+                    <div class="featured-anime">
+                        <h4>Attack on Titan</h4>
+                        <p>Epic story of humanity's fight for survival against giant humanoid creatures.</p>
+                        <div class="rating-controls">
+                            <button onclick="toggleLike()" id="like-btn">👍 Like</button>
+                            <span id="like-count">0</span> likes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poll/Survey Section -->
+                <div class="feature-section">
+                    <h3>📊 Poll: Favorite Anime Genre</h3>
+                    <div id="poll-section">
+                        <p>What's your favorite anime genre?</p>
+                        <form id="genre-poll">
+                            <label><input type="radio" name="genre" value="Action"> Action</label>
+                            <label><input type="radio" name="genre" value="Romance"> Romance</label>
+                            <label><input type="radio" name="genre" value="Comedy"> Comedy</label>
+                            <label><input type="radio" name="genre" value="Drama"> Drama</label>
+                            <label><input type="radio" name="genre" value="Fantasy"> Fantasy</label>
+                            <label><input type="radio" name="genre" value="Slice of Life"> Slice of Life</label>
+                        </form>
+                        <button onclick="submitVote()">Vote</button>
+                        <button onclick="showResults()">Show Results</button>
+                        <div id="poll-results"></div>
+                    </div>
+                </div>
+
+                <!-- Comment Section -->
+                <div class="feature-section">
+                    <h3>💬 Guestbook</h3>
+                    <div id="comment-form">
+                        <div class="form-group">
+                            <label for="comment-name">Name:</label>
+                            <input type="text" id="comment-name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-text">Comment:</label>
+                            <textarea id="comment-text" placeholder="Share your thoughts about anime..." rows="3"></textarea>
+                        </div>
+                        <button onclick="addComment()">Add Comment</button>
+                        <button onclick="clearComments()">Clear All Comments</button>
+                    </div>
+                    <div id="comments-display">
+                        <h4>Recent Comments:</h4>
+                        <div id="comments-list"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="feature-section">
+                    <h3>📧 Newsletter Signup</h3>
+                    <div id="newsletter-form">
+                        <p>Stay updated with the latest anime news and recommendations!</p>
+                        <div class="form-group">
+                            <label for="newsletter-email">Email:</label>
+                            <input type="email" id="newsletter-email" placeholder="Enter your email">
+                        </div>
+                        <button onclick="signupNewsletter()">Subscribe</button>
+                    </div>
+                    <div id="newsletter-success" style="display: none;">
+                        <p class="success-message">✅ Thank you for subscribing! You're now signed up for our anime newsletter.</p>
+                        <button onclick="resetNewsletter()">Subscribe Another Email</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-js-demo">
+            <h2>Advanced JavaScript Demo</h2>
+            <p>Explore advanced JavaScript concepts including form widgets, string manipulation, and error handling!</p>
+            
+            <div class="advanced-demo-container">
+                <!-- Form Widgets Demo -->
+                <div class="widget-demo">
+                    <h3>🎛️ Advanced Form Widgets</h3>
+                    <div class="widget-group">
+                        <div class="form-group">
+                            <label for="demo-range">Volume Control (Range Slider):</label>
+                            <input type="range" id="demo-range" min="0" max="100" value="50">
+                            <span id="range-value">50</span>%
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-date">Anime Release Date:</label>
+                            <input type="date" id="demo-date" value="2023-01-01">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-file">Upload Anime Image:</label>
+                            <input type="file" id="demo-file" accept="image/*">
+                            <div id="file-info"></div>
+                        </div>
+                        
+                        <fieldset>
+                            <legend>Preferred Anime Format:</legend>
+                            <div class="radio-group">
+                                <label><input type="radio" name="format" value="subtitled"> Subtitled</label>
+                                <label><input type="radio" name="format" value="dubbed"> Dubbed</label>
+                                <label><input type="radio" name="format" value="raw"> Raw (Original)</label>
+                            </div>
+                        </fieldset>
+                        
+                        <button onclick="demonstrateWidgets()" class="demo-button">Test All Widgets</button>
+                        <div id="widget-output"></div>
+                    </div>
+                </div>
+                
+                <!-- String Methods Demo -->
+                <div class="string-demo">
+                    <h3>📝 String Object Methods</h3>
+                    <div class="string-group">
+                        <div class="form-group">
+                            <label for="demo-text">Enter anime title or quote:</label>
+                            <input type="text" id="demo-text" placeholder="Attack on Titan" value="attack on titan">
+                        </div>
+                        
+                        <div class="string-methods">
+                            <button onclick="demonstrateStringMethods('toUpperCase')" class="demo-button">toUpperCase()</button>
+                            <button onclick="demonstrateStringMethods('toLowerCase')" class="demo-button">toLowerCase()</button>
+                            <button onclick="demonstrateStringMethods('split')" class="demo-button">split(' ')</button>
+                            <button onclick="demonstrateStringMethods('replace')" class="demo-button">replace()</button>
+                            <button onclick="demonstrateStringMethods('charAt')" class="demo-button">charAt(0)</button>
+                            <button onclick="demonstrateStringMethods('length')" class="demo-button">length</button>
+                            <button onclick="demonstrateStringMethods('constructor')" class="demo-button">String() constructor</button>
+                        </div>
+                        
+                        <div id="string-output">
+                            <h4>String Method Results:</h4>
+                            <div id="string-results"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exception Handling Demo -->
+                <div class="error-demo">
+                    <h3>⚠️ Exception Handling Demo</h3>
+                    <div class="error-group">
+                        <p>Test different error scenarios and see how JavaScript handles them gracefully:</p>
+                        
+                        <div class="error-buttons">
+                            <button onclick="testErrorHandling('parse')" class="demo-button">JSON Parse Error</button>
+                            <button onclick="testErrorHandling('reference')" class="demo-button">Reference Error</button>
+                            <button onclick="testErrorHandling('type')" class="demo-button">Type Error</button>
+                            <button onclick="testErrorHandling('custom')" class="demo-button">Custom Error</button>
+                            <button onclick="testErrorHandling('success')" class="demo-button success-btn">Success Case</button>
+                        </div>
+                        
+                        <div id="error-output">
+                            <h4>Error Handling Results:</h4>
+                            <div id="error-results">
+                                <p>Click a button above to test error handling. Each scenario demonstrates proper try/catch usage with user-friendly messages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Entanimeertainment Hub</h2>
+            <p>Email: <a href="mailto:info@entanimeertainmenthub.com">info@entanimeertainmenthub.com</a></p>
+            <p><strong>Ready to start your next accessible anime adventure?</strong></p>
+            <a class="cta-button" href="mailto:info@entanimeertainmenthub.com">Contact Us Now</a>
+        </section>
+    </main>
+    <!-- Example popup/chat code, hidden by default -->
+    <div id="popup-chat" style="display:none;" role="dialog" aria-modal="true" aria-label="Live Chat">
+        <p>Welcome to Entanimeertainment Hub! How can we help you?</p>
+        <button onclick="document.getElementById('popup-chat').style.display='none';">Close</button>
+    </div>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#features">Accessibility Features</a></li>
+            <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#js-demo">JS Demo</a></li>
+            <li><a href="#demo-features">Demo Features</a></li>
+            <li><a href="#advanced-js-demo">Advanced JS Demo</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://twitter.com/" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+            <a href="https://facebook.com/" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+            <a href="https://instagram.com/" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        </div>
+        <p>&copy; 2025 Entanimeertainment Hub. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
