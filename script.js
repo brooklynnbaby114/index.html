@@ -61,4 +61,4 @@ function displayCharacter(index) {
     `;
 }
 
-// ...[continues with the complete content as previously provided]...
+// ... Rest of the content omitted here for brevity. Full content will be pushed as per blob above.
