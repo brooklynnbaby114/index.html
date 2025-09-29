@@ -425,3 +425,225 @@ function loadNewsletterState() {
         }
     }
 }
+
+// Advanced JavaScript Demo Functions
+
+// Form Widgets Demonstration
+function demonstrateWidgets() {
+    const range = document.getElementById('demo-range');
+    const date = document.getElementById('demo-date');
+    const file = document.getElementById('demo-file');
+    const format = document.querySelector('input[name="format"]:checked');
+    const output = document.getElementById('widget-output');
+    
+    let results = '<h4>Widget Values:</h4><ul>';
+    
+    // Range slider value
+    results += `<li><strong>Volume Level:</strong> ${range.value}%</li>`;
+    
+    // Date picker value
+    const dateValue = new Date(date.value);
+    results += `<li><strong>Selected Date:</strong> ${dateValue.toLocaleDateString()}</li>`;
+    
+    // File input
+    if (file.files.length > 0) {
+        const fileInfo = file.files[0];
+        results += `<li><strong>Selected File:</strong> ${fileInfo.name} (${Math.round(fileInfo.size / 1024)}KB)</li>`;
+    } else {
+        results += `<li><strong>File:</strong> No file selected</li>`;
+    }
+    
+    // Radio button selection
+    if (format) {
+        results += `<li><strong>Preferred Format:</strong> ${format.value}</li>`;
+    } else {
+        results += `<li><strong>Format:</strong> No selection made</li>`;
+    }
+    
+    results += '</ul>';
+    output.innerHTML = results;
+}
+
+// Update range slider display in real time
+document.addEventListener('DOMContentLoaded', function() {
+    const rangeSlider = document.getElementById('demo-range');
+    const rangeValue = document.getElementById('range-value');
+    
+    if (rangeSlider && rangeValue) {
+        rangeSlider.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+        });
+    }
+    
+    // File input change handler
+    const fileInput = document.getElementById('demo-file');
+    const fileInfo = document.getElementById('file-info');
+    
+    if (fileInput && fileInfo) {
+        fileInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                const file = this.files[0];
+                fileInfo.innerHTML = `
+                    <div class="file-details">
+                        <strong>File selected:</strong> ${file.name}<br>
+                        <strong>Size:</strong> ${Math.round(file.size / 1024)}KB<br>
+                        <strong>Type:</strong> ${file.type || 'Unknown'}
+                    </div>
+                `;
+            } else {
+                fileInfo.innerHTML = '';
+            }
+        });
+    }
+});
+
+// String Methods Demonstration
+function demonstrateStringMethods(method) {
+    const textInput = document.getElementById('demo-text');
+    const resultsDiv = document.getElementById('string-results');
+    const originalText = textInput.value || 'Attack on Titan';
+    
+    let result = '';
+    let explanation = '';
+    
+    try {
+        switch(method) {
+            case 'toUpperCase':
+                result = originalText.toUpperCase();
+                explanation = `Converts all characters to uppercase`;
+                break;
+            case 'toLowerCase':
+                result = originalText.toLowerCase();
+                explanation = `Converts all characters to lowercase`;
+                break;
+            case 'split':
+                result = originalText.split(' ');
+                explanation = `Splits the string into an array using space as delimiter`;
+                break;
+            case 'replace':
+                result = originalText.replace(/attack/gi, 'Shingeki');
+                explanation = `Replaces 'attack' with 'Shingeki' (case insensitive)`;
+                break;
+            case 'charAt':
+                result = originalText.charAt(0);
+                explanation = `Gets the character at position 0 (first character)`;
+                break;
+            case 'length':
+                result = originalText.length;
+                explanation = `Returns the length of the string`;
+                break;
+            case 'constructor':
+                const stringObj = new String(originalText);
+                result = stringObj.toString();
+                explanation = `Creates a String object using the String() constructor`;
+                break;
+            default:
+                result = 'Unknown method';
+                explanation = 'Method not recognized';
+        }
+        
+        // Display result
+        const resultHTML = `
+            <div class="string-result">
+                <div class="result-header">
+                    <strong>Method:</strong> ${method}() 
+                    <span class="original-text">Original: "${originalText}"</span>
+                </div>
+                <div class="result-value">
+                    <strong>Result:</strong> ${Array.isArray(result) ? '[' + result.join(', ') + ']' : '"' + result + '"'}
+                </div>
+                <div class="result-explanation">
+                    <strong>Explanation:</strong> ${explanation}
+                </div>
+            </div>
+        `;
+        
+        resultsDiv.innerHTML = resultHTML;
+        
+    } catch (error) {
+        resultsDiv.innerHTML = `
+            <div class="string-result error">
+                <strong>Error:</strong> ${error.message}
+            </div>
+        `;
+    }
+}
+
+// Exception Handling Demonstration
+function testErrorHandling(errorType) {
+    const resultsDiv = document.getElementById('error-results');
+    
+    try {
+        switch(errorType) {
+            case 'parse':
+                // Intentionally malformed JSON to trigger parse error
+                JSON.parse('{ invalid json }');
+                break;
+                
+            case 'reference':
+                // Try to access undefined variable
+                console.log(nonExistentVariable);
+                break;
+                
+            case 'type':
+                // Try to call method on null
+                let nullValue = null;
+                nullValue.someMethod();
+                break;
+                
+            case 'custom':
+                // Throw custom error
+                throw new Error('This is a custom anime database error!');
+                
+            case 'success':
+                // Success case - no error
+                const animeData = { title: 'Demon Slayer', rating: 9.5 };
+                resultsDiv.innerHTML = `
+                    <div class="success-result">
+                        <h5>✅ Success Case</h5>
+                        <p><strong>Operation completed successfully!</strong></p>
+                        <p>Retrieved anime data: ${JSON.stringify(animeData, null, 2)}</p>
+                        <p><em>This demonstrates normal execution flow without errors.</em></p>
+                    </div>
+                `;
+                return; // Exit early for success case
+        }
+        
+    } catch (error) {
+        // This is where we handle errors gracefully
+        let errorCategory = 'Unknown';
+        let userFriendlyMessage = '';
+        let technicalDetails = error.message;
+        
+        if (error instanceof SyntaxError) {
+            errorCategory = 'Syntax Error';
+            userFriendlyMessage = 'There was a problem with the data format. Please check your input and try again.';
+        } else if (error instanceof ReferenceError) {
+            errorCategory = 'Reference Error';
+            userFriendlyMessage = 'A required resource could not be found. Please refresh the page and try again.';
+        } else if (error instanceof TypeError) {
+            errorCategory = 'Type Error';
+            userFriendlyMessage = 'There was a problem processing your request. Please verify your data and try again.';
+        } else {
+            errorCategory = 'Custom Error';
+            userFriendlyMessage = 'Something went wrong with the anime database. Our team has been notified.';
+        }
+        
+        resultsDiv.innerHTML = `
+            <div class="error-result">
+                <h5>🛑 ${errorCategory} Caught!</h5>
+                <div class="user-message">
+                    <p><strong>User-friendly message:</strong></p>
+                    <p>${userFriendlyMessage}</p>
+                </div>
+                <div class="technical-details">
+                    <p><strong>Technical details:</strong></p>
+                    <p><code>${technicalDetails}</code></p>
+                </div>
+                <div class="error-explanation">
+                    <p><em>This error was caught using try/catch blocks, preventing the application from crashing and providing a better user experience.</em></p>
+                </div>
+            </div>
+        `;
+    }
+}
