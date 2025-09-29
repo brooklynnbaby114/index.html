@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entertainment Hub | Anime Entertainment & Accessibility</title>
-    <meta name="description" content="Entertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and more!" />
+    <meta name="description" content="Entertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and more." />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -67,6 +67,41 @@
             <p><strong>Ready to start your next accessible anime adventure?</strong></p>
             <a class="cta-button" href="mailto:info@entertainmenthub.com">Contact Us Now</a>
         </section>
+        <!-- Accessible Input Demo Section -->
+        <section id="input-demo" aria-labelledby="input-demo-heading">
+            <h2 id="input-demo-heading">Try Common HTML Inputs</h2>
+            <form id="demoForm" onsubmit="event.preventDefault(); showDemoResults();" style="max-width: 600px; margin: 2rem auto; padding: 1rem; border-radius: 8px; background: #f9f9fc; border: 1px solid #ddd;">
+                <fieldset>
+                    <legend><strong>Radio Buttons: Choose Your Fandom</strong></legend>
+                    <div>
+                        <input type="radio" id="radio-anime" name="fandom" value="Anime" required />
+                        <label for="radio-anime">Anime</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio-manga" name="fandom" value="Manga" />
+                        <label for="radio-manga">Manga</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio-games" name="fandom" value="Games" />
+                        <label for="radio-games">Games</label>
+                    </div>
+                </fieldset>
+                <br />
+                <label for="demo-slider"><strong>Slider: Pick a Hype Level (0–100)</strong></label>
+                <input type="range" id="demo-slider" name="hype" min="0" max="100" value="50" step="1" oninput="document.getElementById('slider-value').textContent = this.value" />
+                <span id="slider-value">50</span>
+                <br /><br />
+                <label for="demo-date"><strong>Date Picker: Select Your Next Watch Party</strong></label>
+                <input type="date" id="demo-date" name="watchparty" required />
+                <br /><br />
+                <label for="demo-file"><strong>File Uploader: Upload Your Cosplay Photo</strong></label>
+                <input type="file" id="demo-file" name="cosplay" accept="image/*" />
+                <span id="file-selected"></span>
+                <br /><br />
+                <button type="submit">Show Results</button>
+            </form>
+            <div id="demo-results" style="margin: 1.5rem 0 0 0;"></div>
+        </section>
     </main>
     <footer>
         <ul class="footer-links">
@@ -82,5 +117,6 @@
         </div>
         <p>&copy; 2025 Entertainment Hub. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
