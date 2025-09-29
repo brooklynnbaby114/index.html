@@ -9,6 +9,10 @@
             event.preventDefault();
             alert('Thank you for contacting us, ' + document.getElementById('name').value + '!');
         }
+        
+        function updateSliderValue(value) {
+            document.getElementById('slider-value').textContent = value;
+        }
     </script>
 </head>
 <body>
@@ -28,6 +32,31 @@
             <input type="text" id="name" name="name" required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
+            
+            <!-- Radio button group -->
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+                <input type="radio" id="social" name="source" value="social">
+                <label for="social">Social Media</label><br>
+                <input type="radio" id="friend" name="source" value="friend">
+                <label for="friend">Friend</label><br>
+                <input type="radio" id="other" name="source" value="other">
+                <label for="other">Other</label>
+            </fieldset><br>
+            
+            <!-- Range slider for anime love -->
+            <label for="anime-love">How much do you love anime? (1-10)</label><br>
+            <input type="range" id="anime-love" name="anime-love" min="1" max="10" value="5" oninput="updateSliderValue(this.value)">
+            <span id="slider-value">5</span><br><br>
+            
+            <!-- Date picker for birthday -->
+            <label for="birthday">Your Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            
+            <!-- File uploader -->
+            <label for="anime-image">Upload your favorite anime image:</label>
+            <input type="file" id="anime-image" name="anime-image" accept="image/*"><br><br>
+            
             <input type="submit" value="Submit">
         </form>
         <a href="https://github.com/brooklynnbaby114/index.html" target="_blank">Our GitHub Repo</a>
