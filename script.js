@@ -1,2 +1,1 @@
-// Updated content from commit 70d7827461d257ef1e8c3c6de2b8558abc345c78
-console.log('This is the updated script.js');
+console.log('Updated content from commit 70d7827461d257ef1e8c3c6de2b8558abc345c78'); // Add full content here.
