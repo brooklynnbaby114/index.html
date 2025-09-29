@@ -1,73 +1,95 @@
-<!-- ...existing content... -->
-<!-- Replace the profile, comment, and newsletter form sections with the following: -->
-
-<!-- User Profile Section -->
-<div class="feature-section">
-    <h3>👤 User Profile</h3>
-    <div id="profile-form" novalidate>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" aria-describedby="username-error" placeholder="Enter your username">
-            <div class="inline-error" id="username-error" aria-live="polite"></div>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" aria-describedby="email-error" placeholder="Enter your email">
-            <div class="inline-error" id="email-error" aria-live="polite"></div>
-        </div>
-        <div class="form-group">
-            <label for="favorite-anime">Favorite Anime:</label>
-            <input type="text" id="favorite-anime" aria-describedby="favorite-anime-error" placeholder="Enter your favorite anime show">
-            <div class="inline-error" id="favorite-anime-error" aria-live="polite"></div>
-        </div>
-        <button type="button" onclick="saveProfile()">Save Profile</button>
-        <button type="button" onclick="clearProfile()">Clear Profile</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entertainment Hub | Anime Entertainment & Accessibility</title>
+    <meta name="description" content="Entertainment Hub: Your source for anime entertainment, web design, and accessibility-focused solutions. Explore our anime gallery, accessible features, and more!" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <img src="images/EntertainmentHubLogo.png" alt="Entertainment Hub logo featuring anime characters" />
+        <h1>Entertainment Hub</h1>
+        <p>Welcome to Your Accessible Anime Entertainment Page</p>
+    </header>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#main-content">Skip to Content</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <section id="features">
+            <h2>Entertainment Hub Accessibility Features</h2>
+            <ul>
+                <li>Semantic HTML structure for screen readers</li>
+                <li>Descriptive alt text for all images (e.g., <strong>Entertainment Hub logo featuring anime characters</strong>)</li>
+                <li>Keyboard navigation support</li>
+                <li>Accessible color contrast</li>
+                <li>Sufficient color contrast for text and backgrounds</li>
+            </ul>
+        </section>
+        <section id="anime-gallery">
+            <h2>Entertainment Hub Anime Gallery</h2>
+            <div class="anime-images">
+                <img src="images/anime-poster-1-entertainmenthub.jpg" alt="Entertainment Hub anime movie poster showing protagonists under cherry blossoms" />
+                <img src="images/anime-poster-2-entertainmenthub.jpg" alt="Fantasy anime poster from Entertainment Hub featuring a dragon and warrior" />
+                <img src="images/accessible-image-entertainmenthub.png" alt="Accessible Image from Entertainment Hub" />
+            </div>
+            <p>
+                <a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Check out our favorite anime platform!</a>
+            </p>
+        </section>
+        <section id="services">
+            <h2>Entertainment Hub Services</h2>
+            <ul>
+                <li>
+                    <img src="images/web-design-entertainmenthub.png" alt="Entertainment Hub web design service illustration showing a modern website layout" />
+                    <p>Professional web design with accessibility in mind.</p>
+                </li>
+                <li>
+                    <img src="images/development-entertainmenthub.png" alt="Entertainment Hub software development illustration showing code editor" />
+                    <p>Full-stack development solutions for modern applications.</p>
+                </li>
+                <li>
+                    <img src="images/consulting-entertainmenthub.png" alt="Entertainment Hub consulting illustration depicting team collaboration" />
+                    <p>Expert consulting on web accessibility and user experience optimization.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Entertainment Hub</h2>
+            <p>Email: <a href="mailto:info@entertainmenthub.com">info@entertainmenthub.com</a></p>
+            <p><strong>Ready to start your next accessible anime adventure?</strong></p>
+            <a class="cta-button" href="mailto:info@entertainmenthub.com">Contact Us Now</a>
+        </section>
+    </main>
+    <!-- Example popup/chat code, hidden by default -->
+    <div id="popup-chat" style="display:none;" role="dialog" aria-modal="true" aria-label="Live Chat">
+        <p>Welcome to Entertainment Hub! How can we help you?</p>
+        <button onclick="document.getElementById('popup-chat').style.display='none';">Close</button>
     </div>
-    <div id="profile-display" style="display: none;">
-        <h4>Your Profile:</h4>
-        <div id="profile-info"></div>
-        <button onclick="editProfile()">Edit Profile</button>
-    </div>
-</div>
-
-<!-- Comment Section -->
-<div class="feature-section">
-    <h3>💬 Guestbook</h3>
-    <div id="comment-form" novalidate>
-        <div class="form-group">
-            <label for="comment-name">Name:</label>
-            <input type="text" id="comment-name" aria-describedby="comment-name-error" placeholder="Your name">
-            <div class="inline-error" id="comment-name-error" aria-live="polite"></div>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#features">Accessibility Features</a></li>
+            <li><a href="#anime-gallery">Anime Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://twitter.com/" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+            <a href="https://facebook.com/" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+            <a href="https://instagram.com/" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram" /></a>
         </div>
-        <div class="form-group">
-            <label for="comment-text">Comment:</label>
-            <textarea id="comment-text" aria-describedby="comment-text-error" placeholder="Share your thoughts about anime..." rows="3"></textarea>
-            <div class="inline-error" id="comment-text-error" aria-live="polite"></div>
-        </div>
-        <button type="button" onclick="addComment()">Add Comment</button>
-        <button type="button" onclick="clearComments()">Clear All Comments</button>
-    </div>
-    <div id="comments-display">
-        <h4>Recent Comments:</h4>
-        <div id="comments-list"></div>
-    </div>
-</div>
-
-<!-- Newsletter Signup -->
-<div class="feature-section">
-    <h3>📧 Newsletter Signup</h3>
-    <div id="newsletter-form" novalidate>
-        <p>Stay updated with the latest anime news and recommendations!</p>
-        <div class="form-group">
-            <label for="newsletter-email">Email:</label>
-            <input type="email" id="newsletter-email" aria-describedby="newsletter-email-error" placeholder="Enter your email">
-            <div class="inline-error" id="newsletter-email-error" aria-live="polite"></div>
-        </div>
-        <button type="button" onclick="signupNewsletter()">Subscribe</button>
-    </div>
-    <div id="newsletter-success" style="display: none;">
-        <p class="success-message">✅ Thank you for subscribing! You're now signed up for our anime newsletter.</p>
-        <button onclick="resetNewsletter()">Subscribe Another Email</button>
-    </div>
-</div>
-<!-- ...rest of existing content... -->
+        <p>&copy; 2025 Entertainment Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        // Example: Show chat popup only when triggered
+        // document.getElementById('popup-chat').style.display = 'block';
+    </script>
+</body>
+</html>
