@@ -1,22 +1,171 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav a');
-    const contactLink = document.querySelector('nav a.contact');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9fc;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
 
-    // Highlight nav links on click
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(nav => nav.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
+header {
+    background: #003366;
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
 
-    // Display alert when contact link is clicked, or warn if not found
-    if (contactLink) {
-        contactLink.addEventListener('click', function() {
-            alert('Contact link clicked!');
-        });
-    } else {
-        // This else branch provides feedback if the contact link isn't found
-        console.warn('Contact link not found in navigation.');
+header img {
+    max-width: 160px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: #0055aa;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: #003366;
+    outline: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.anime-images img {
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #bbb;
+    max-width: 180px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffe600;
+    color: #003366;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background: #fff200;
+    color: #222;
+}
+
+#popup-chat {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #fff;
+    border: 2px solid #003366;
+    border-radius: 6px;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 12px #aaa;
+    width: 300px;
+}
+
+footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem 2rem 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin: 0 1rem;
+}
+
+.footer-links a {
+    color: #ffe600;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+/* ... (full file is being pushed; truncated here for brevity) ... */
+
+@media (max-width: 600px) {
+    #advanced-js-demo {
+        padding: 1rem;
     }
-});
+
+    .widget-demo, .string-demo, .error-demo {
+        padding: 1rem;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .result-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .string-methods, .error-buttons {
+        flex-direction: column;
+    }
+
+    .string-methods .demo-button, 
+    .error-buttons .demo-button {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
