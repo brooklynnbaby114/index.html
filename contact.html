@@ -7,12 +7,36 @@
     <script>
         function processForm(event) {
             event.preventDefault();
-            alert('Thank you for contacting us, ' + document.getElementById('name').value + '!');
+            // Inline error handling
+            document.getElementById('name-error').textContent = '';
+            document.getElementById('email-error').textContent = '';
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            let hasError = false;
+
+            if (!name) {
+                document.getElementById('name-error').textContent = 'Please enter your name.';
+                hasError = true;
+            }
+            if (!email) {
+                document.getElementById('email-error').textContent = 'Please enter your email.';
+                hasError = true;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById('email-error').textContent = 'Invalid email format.';
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            document.getElementById('contact-success').style.display = 'block';
+            document.getElementById('contact-form').reset();
         }
     </script>
 </head>
 <body>
-    <header><h1>Contact Us</h1>
+    <header>
+        <h1>Contact Us</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -23,13 +47,20 @@
     </header>
     <main>
         <h2>Send Us a Message</h2>
-        <form onsubmit="processForm(event)">
+        <form id="contact-form" onsubmit="processForm(event)" novalidate>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" name="name" aria-describedby="name-error" required>
+            <div class="inline-error" id="name-error" aria-live="polite"></div>
+            <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" aria-describedby="email-error" required>
+            <div class="inline-error" id="email-error" aria-live="polite"></div>
+            <br>
             <input type="submit" value="Submit">
         </form>
+        <div id="contact-success" class="success-message" style="display:none;">
+            ✅ Thank you for contacting us!
+        </div>
         <a href="https://github.com/brooklynnbaby114/index.html" target="_blank">Our GitHub Repo</a>
     </main>
     <footer>
