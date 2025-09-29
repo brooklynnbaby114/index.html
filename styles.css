@@ -69,9 +69,12 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 0.75rem;
+    padding: 1rem 0.75rem;
     border-radius: 4px;
     transition: background 0.2s;
+    min-height: 46px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 nav ul li a:hover,
