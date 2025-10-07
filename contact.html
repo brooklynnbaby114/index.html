@@ -7,7 +7,6 @@
     <script>
         function processForm(event) {
             event.preventDefault();
-            // Inline error handling
             document.getElementById('name-error').textContent = '';
             document.getElementById('email-error').textContent = '';
 
@@ -26,7 +25,6 @@
                 document.getElementById('email-error').textContent = 'Invalid email format.';
                 hasError = true;
             }
-
             if (hasError) return;
 
             document.getElementById('contact-success').style.display = 'block';
@@ -35,15 +33,19 @@
     </script>
 </head>
 <body>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="characters.html">Characters</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <header>
         <h1>Contact Us</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="characters.html">Characters</a>
-            <a href="table.html">Table</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
     <main>
         <h2>Send Us a Message</h2>
@@ -59,7 +61,7 @@
             <input type="submit" value="Submit">
         </form>
         <div id="contact-success" class="success-message" style="display:none;">
-            ✅ Thank you for contacting us!
+            &#x2705; Thank you for contacting us!
         </div>
         <a href="https://github.com/brooklynnbaby114/index.html" target="_blank">Our GitHub Repo</a>
     </main>
