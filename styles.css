@@ -64,4 +64,23 @@ footer {
     max-width: 180px;
 }
 
+/* Logo ninja styling */
+.logo-ninja {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffe600;
+    display: inline-block;
+    position: relative;
+}
+
+.logo-ninja .slash {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #ffe600;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(15deg);
+}
+
 /* ...rest of your CSS remains unchanged... */
