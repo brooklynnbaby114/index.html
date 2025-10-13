@@ -13,9 +13,29 @@ header {
     text-align: center;
 }
 
-header img {
-    max-width: 160px;
-    height: auto;
+/* Logo "E" with ninja/action theme */
+.logo-e {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #c41e3a;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    position: relative;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.logo-e::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff0000, #c41e3a, #8b0000, transparent);
+    transform: translateY(-50%) rotate(-25deg);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
 
 nav ul {
